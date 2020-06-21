@@ -88,20 +88,41 @@ function getresult(query) {
 
 getresult("func=1&key=Title&query=");
 
+function resetselect() {
+    generatecontent();
+    generatecountry();
+    document.getElementById("selectcity").innerHTML = "<option value=\"\">Select a city</option>";
+
+}
+function clearfields() {
+    let click = document.getElementsByClassName("asidelink");
+    for(let i= 0; i < click.length; i++){
+        let p = click[i].children[0];
+        p.style.color = "Black";
+    }
+}
+
 //search by title
 function onclick1() {
     var title = document.getElementById("Title").value;
     var query = "func=1&key=Title&query="+title;
     getresult(query);
+    resetselect();
+    clearfields();
 }
 document.getElementById("searchtitle").onclick = onclick1;
+
 
 //click hot fields
 function onclick2() {
     let key = this.className;
+    clearfields();
+    this.style.color = "Red";
     let value = this.getAttribute("name");
     let query = "func=1&key="+key+"&query="+value;
     getresult(query);
+    resetselect();
+    document.getElementById("Title").value = "";
 }
 
 
@@ -131,6 +152,8 @@ function getfilter() {
 }
 document.getElementById("filter-button").onclick = function () {
     getresult(getfilter());
+    clearfields();
+    document.getElementById("Title").value = "";
 };
 
 function gethots() {
@@ -172,6 +195,7 @@ function generatecountry() {
     countryhttp.send();
     countryselect.innerHTML = countryhttp.responseText;
     countryselect.onchange = function (){
+        document.getElementById("Title").value = "";
         generatecity(countryselect.value);
     }
 }

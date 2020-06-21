@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+	<meta charset="utf-8">
+
+</head>
+<body>
+
+	<h1>欢迎!</h1>
+	<form action=status.php?func=1" method="post" name="loginform" id="loginform">
+		<span id="err"></span>
+		<fieldset>
+			<label>用户名：</label><br>
+			<input type="text" name="username" placeholder="Numbers, letters, . and _. At least 5 characters." required>
+			<label>密码：</label><br>
+			<input type="password" name="password" placeholder="Numbers and letters. At least 6 characters." required>
+			<input type="submit" name="signin" value="登录" class="btn" id="signin">
+
+		</fieldset>
+	</form>
+
+	<p>还没有账号？<a href="sign_up.html">马上注册吧！</a></p>
+
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+
+</body>
+<script>
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return r[2]; return null;
+	}
+	if(getQueryString("err") == 1){
+		var text = document.createTextNode("用户名或密码错误！");
+		document.getElementById("err").appendChild(text);
+	}
+</script>
+</html>

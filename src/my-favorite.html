@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my-favorite</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/my-favorite.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="../index.html" id="homelink">HOME</a></li>
+			<li><a href="navigate.html" id="navlink">NAV</a></li>
+			<li><a href="search.html" id="searchlink">SEARCH</a></li>
+			<div class="dropdown" id="dropdown">
+				<a class="dropbtn" id="signin">
+					<span id="displayusername"></span>
+				</a>
+				<div class="dropdown-content">
+					<img src="../img/icon-upload.png">
+					<a href="upload.html" id="uploadlink">Upload</a>
+					<img src="../img/icon-photo.png">
+					<a href="my-photo.html" id="myphotolink">My Photo</a>
+					<img src="../img/icon-favorite.png">
+					<a href="my-favorite.html" id="myfavoritelink">My Favorite</a>
+					<img src="../img/icon-signin.png">
+					<a href="status.php?func=2">Sign out</a>
+				</div>
+			</div>
+		</ul>
+	</nav>
+</header>
+	<main>
+		<div class="my-favorite">
+			<ul>
+				<li>
+					<span>My Favorite</span>
+				</li>
+				<li>
+					<div id="displayfavor"></div>
+
+					<div class="pagenumber" style="text-align: center;">
+						<div onclick="prepage()">&lt&lt</div>
+						<div id="pagenums"></div>
+						<div onclick="nextpage()">&gt&gt</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+	<script src="user.js"></script>
+	<script src="myfavorite.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浏览</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/navigate.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="../index.html" id="homelink">HOME</a></li>
+			<li><a href="navigate.html" id="navlink" class="active">NAV</a></li>
+			<li><a href="search.html" id="searchlink">SEARCH</a></li>
+			<div class="dropdown" id="dropdown">
+				<a class="dropbtn" id="signin">
+					<span id="displayusername"></span>
+				</a>
+				<div class="dropdown-content">
+					<img src="../img/icon-upload.png">
+					<a href="upload.html" id="uploadlink">Upload</a>
+					<img src="../img/icon-photo.png">
+					<a href="my-photo.html" id="myphotolink">My Photo</a>
+					<img src="../img/icon-favorite.png">
+					<a href="my-favorite.html" id="myfavoritelink">My Favorite</a>
+					<img src="../img/icon-signin.png">
+					<a href="status.php?func=2">Sign out</a>
+				</div>
+			</div>
+		</ul>
+	</nav>
+</header>
+	
+	<aside>
+		<div>
+			<table class="search-by-title" >
+				<tr>
+					<td class="aside-td first-td">
+						<div>Fliter by Title</div>	
+					</td>
+				</tr>
+				<tr>
+					<td class="search-td">
+						<!-- <form class="search-form"> -->
+						<input class="img-name" type="text" name="Title" id="Title">
+						<input class="search-button"type="button" name="search-by-title" id="searchtitle" value="SEARCH" >
+						<!-- </form> -->
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="hot-content" id="hot-content">
+
+			</table>
+		</div>
+		<div>
+			<table class="hot-country" id="hot-country">
+
+			</table>
+		</div>
+		<div>
+			<table class="hot-city" id="hot-city">
+
+			</table>
+		</div>
+	</aside>
+	<main>
+		<table class="filter-table">
+			<tr id="filter-title">
+				<td class="filter-title">
+					<div>Filter</div>
+				</td>
+			</tr>
+			<tr id="filter-row">
+				<td class="filter-td">
+					<form name="select">
+					<select name="content" id="selectcontent">
+
+					</select>
+					<select name="country" id="selectcountry">
+
+					</select>
+					<select name="city"  id="selectcity">
+						<option value="">Select a city</option>
+					</select>
+					
+					<input class="filter-button" type="button" name="filter-button" id="filter-button" value="Filter">
+				</form>
+				</td>
+			</tr>
+			<tr id="content-tr">
+				<td>
+					<table class="content-table" id="resulthint">
+
+					</table>
+				</td>					
+			</tr>
+			<tr id="pagenumber">
+				<td>
+					<div class="pagenumber" style="text-align: center;">
+						<div onclick="prepage()">&lt&lt</div>
+						<div id="pagenums"></div>
+						<div onclick="nextpage()">&gt&gt</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+
+</body>
+</html>
+<script src="user.js"></script>
+<script src="navigate.js"></script>

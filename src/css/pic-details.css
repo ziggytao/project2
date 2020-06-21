@@ -1,0 +1,147 @@
+.main {
+	overflow: hidden;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 70px;
+	width: 90%;
+	border: solid lightgrey 1px;
+	border-radius: 5px;
+	list-style: none;
+	padding: 0px;
+} 
+.main ul {
+	overflow: hidden;
+}
+li p {
+	margin: 0px;
+}
+.main li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.main-cap {
+	border-bottom-width: 1px;
+	border-bottom-color: lightgrey;
+	border-bottom-style: solid;
+	background-color: #4CAF50;
+	padding-left: 40px;
+}
+.main-cap p {
+	font-weight: bold;
+	color: white;
+}
+.description-title {
+	font-size: 20pt;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.description-title span {
+	font-weight: normal;
+	font-size: 14pt;
+}
+.main-content {
+	padding-left: 40px;
+}
+.description-title {
+	/*text-align: center;*/
+}
+.mainpic {
+	width: 40%;
+	height: 35%;
+	float: left;
+}
+.mainpic img{
+	width: 100%;
+	height: 100%;
+}
+.like-frame {
+	width: 52%;
+	overflow: hidden;
+	float: left;
+	/*margin-left: 80px;*/
+	margin-left: 5%;
+}
+.description-content {
+	overflow: hidden;
+	margin-top: 50px;
+	width: 100%;
+}
+div.description-content {
+	margin-bottom: 20px;
+	width: 95%;
+}
+p.description-content {
+	font-size: 14pt;
+}
+.like-number {
+	padding-left: 0px;
+	list-style: none;
+	border: solid lightgrey 1px;
+	border-radius: 5px;
+}
+.like-number li {
+	padding-left: 20px;
+}
+.like-number li:nth-child(1) {
+	border-bottom-width: 1px;
+	border-bottom-color: lightgrey;
+	border-bottom-style: solid;
+	background-color: #4CAF50;
+}
+.like-number li:nth-child(1) p {
+	color: white;
+}
+.like {
+	cursor: pointer;
+	margin: 0 auto;
+	box-sizing: border-box;
+	background-color: #4CAF50;
+	color: white;
+	text-align: center;
+	margin-top: 5px;
+	width: 50%;
+	height: 40px;
+	border: solid lightgrey 1px;
+	border-radius: 5px;
+}
+.like img {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 9px;
+}
+.like span {
+	position: relative;
+	top: 5px;
+}
+.like:hover {
+	background-color: green;
+}
+.img-detail {
+	margin-top: 20px;
+	padding-left: 0px;
+	list-style: none;
+	border: solid lightgrey 1px;
+	border-radius: 5px;
+}
+.img-detail li {
+	padding-left: 20px;
+	border-bottom-width: 1px;
+	border-bottom-color: lightgrey;
+	border-bottom-style: solid;
+}
+.img-detail li:nth-child(4) {
+	border-bottom-width: 0px;
+}
+.img-detail li:nth-child(1) {
+	border-bottom-width: 1px;
+	border-bottom-color: lightgrey;
+	border-bottom-style: solid;
+	background-color: #4CAF50;
+}
+.img-detail li:nth-child(1) p {
+	color: white;
+}
+footer {
+	margin-top: 20px;
+}

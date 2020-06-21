@@ -1,0 +1,129 @@
+header {
+    height: 50px;
+}
+#top {
+    margin-top: -50px;
+}
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+tr{
+    /*align-items: center;*/
+}
+.home-display {
+    background-color: white;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 5px;
+    border-style: solid;
+}
+.home-display td{
+    width: 180px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #ccc;
+    background-color: #f6f6f6
+}
+#td-foot {
+    border-width: 0px;
+    padding: 0px;
+}
+table.home-display{
+    border-spacing: 20px;
+    margin: 0 auto;
+}
+img{
+    width: 600px;
+    height: 320px;
+}
+img.small{
+    width: 180px;
+    height: 180px;
+}
+.description-title {
+    font-weight: bold;
+    width: 100%;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.description-content {
+    width: 100%;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /*background-color: blue;*/
+}
+.mainpic{
+    width: 600px;
+    height: 340px;
+    margin: 70px auto;
+    margin-bottom: 0px;
+    /*text-align: center;*/
+}
+footer {
+    margin-top: 20px;
+}
+.pagenumber a{
+    text-decoration: none;
+    color: black;
+}
+a.active-page{
+    text-decoration: underline;
+}
+.top-icon {
+    background-color: lightgrey;
+    position: fixed;
+    bottom: 5px;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+    border: solid lightgrey 1px;
+    border-radius: 5px;
+}
+.top-icon:hover {
+    border-color: grey;
+}
+.top-icon img {
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.refresh-icon:hover {
+    border-color: grey;
+}
+.refresh-icon {
+    cursor: pointer;
+    background-color: lightgrey;
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: solid lightgrey 1px;
+    border-radius: 5px;
+}
+.refresh-icon img {
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.icon-class img {
+    width: 30px;
+    height: 30px;
+}
+.pagenumber {
+    text-align: center;
+    margin-top: -20px;
+}

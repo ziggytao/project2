@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>upload</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/upload.css">
+	<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script> 
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="../index.html" id="homelink">HOME</a></li>
+			<li><a href="navigate.html" id="navlink">NAV</a></li>
+			<li><a href="search.html" id="searchlink">SEARCH</a></li>
+			<div class="dropdown" id="dropdown">
+				<a class="dropbtn" id="signin">
+					<span id="displayusername"></span>
+				</a>
+				<div class="dropdown-content">
+					<img src="../img/icon-upload.png">
+					<a href="upload.html" id="uploadlink">Upload</a>
+					<img src="../img/icon-photo.png">
+					<a href="my-photo.html" id="myphotolink">My Photo</a>
+					<img src="../img/icon-favorite.png">
+					<a href="my-favorite.html" id="myfavoritelink">My Favorite</a>
+					<img src="../img/icon-signin.png">
+					<a href="status.php?func=2">Sign out</a>
+				</div>
+			</div>
+		</ul>
+	</nav>
+</header>
+	<main>
+		<ul>
+			<li>
+				<span>Upload</span>
+			</li>
+			<li>
+				<form action="upload_file.php" method="post" enctype="multipart/form-data">
+					<input type="file" name="upload-file" id="upload-file" accept=".png, .jpg, .jpeg">
+					<img src="" id="img0">
+					<label>Title:</label>
+					<input type="text" name="img-title" id="title">
+					<label>Description:</label>
+					<textarea class="img-description" name="img-description" rows="10" id="description"></textarea>
+					<label>Content:</label>
+					<select name="content" id="selectcontent">
+
+					</select>
+					<label>Country:</label>
+					<select name="country" id="selectcountry">
+					</select>
+					<label>City:</label>
+					<select name="city" id="selectcity">
+						<option value="">Select a city</option>
+					</select>
+					<!--					<a href="my-photo.html">-->
+					<input type="submit" name="submit" value="Submit" class="submit-btn">
+					<!--					</a>-->
+				</form>
+
+			</li>
+		</ul>
+	</main>
+	<footer>
+		<span>Copyright &copy 2019-2021 Web Foundamental. All Rights Reserved. 备案号：沪FD16307110469</span>
+	</footer>
+	<script>  
+		$("#upload-file").change(
+			function(){  
+				var objUrl = getObjectURL(this.files[0]) ;//获取文件信息  
+				console.log("objUrl = "+objUrl);  
+			  if (objUrl) {  
+				  $("#img0").attr("src", objUrl);
+				  document.getElementById("img0").style.maxWidth = "1000px";
+				  document.getElementById("img0").style.maxHeight = "800px";
+			  }
+			}
+		);  
+		function getObjectURL(file) {  
+			var url = null;   
+			if (window.createObjectURL!=undefined) {  
+			url = window.createObjectURL(file) ;  
+			} else if (window.URL!=undefined) { // mozilla(firefox)  
+		  	url = window.URL.createObjectURL(file) ;  
+			} else if (window.webkitURL!=undefined) { // webkit or chrome  
+			  url = window.webkitURL.createObjectURL(file) ;  
+			}  
+			return url;  
+		}  
+	</script>
+	<script src="user.js"></script>
+	<script src="upload.js"></script>
+</body>
+</html>

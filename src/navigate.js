@@ -146,7 +146,7 @@ function getfilter() {
     let index3 = myselect3.selectedIndex;　　　　　　　　　//获取被选中的索引
     let city = myselect3.options[index3].value;
     if (city != ""){
-        query = query+"&city="+content;
+        query = query+"&city="+city;
     }
     return query;
 }

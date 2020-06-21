@@ -5,7 +5,7 @@ if ( mysqli_connect_errno() ) {
     die( mysqli_connect_error() );
 }
 $sql = "select AsciiName,GeoNameID from geocities
- where Population > 300000 and Country_RegionCodeISO = '$country'
+ where Population > 200000 and Country_RegionCodeISO = '$country'
  order by AsciiName";
 if($result = mysqli_query($connection,$sql)){
     echo '<option value="">Select a city</option>';

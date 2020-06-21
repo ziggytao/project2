@@ -7,7 +7,7 @@ function showpics() {
             document.getElementById("pichint").innerHTML=xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET","getpics.php",true);
+    xmlhttp.open("GET","src/getpics.php",true);
     xmlhttp.send();
 }
 function showmostfavored() {
@@ -19,7 +19,7 @@ function showmostfavored() {
             document.getElementById("mainpic").innerHTML=favorhttp.responseText;
         }
     };
-    favorhttp.open("GET","getpics.php?q=favor",true);
+    favorhttp.open("GET","src/getpics.php?q=favor",true);
     favorhttp.send();
 }
 showpics();
@@ -41,6 +41,6 @@ if(check()){
     document.getElementById("dropdown").className = "dropdown-active";
 }else {
     var signin = document.getElementById("signin");
-    signin.setAttribute("href","src/signin.html");
+    signin.setAttribute("href","signin.html");
 }
 

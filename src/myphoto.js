@@ -85,6 +85,9 @@ function display() {
         }
     }
     divide();
+    if(btns.length == 0){
+        document.getElementById("displayphoto").innerHTML = "<p>You have no photos yet. Please upload some.</p>";
+    }
 }
 display();
 function modify(id){

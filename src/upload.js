@@ -36,6 +36,7 @@ function generatecity(country) {
 generatecontent();
 generatecountry();
 if(getQueryString('id')){
+    document.getElementById("submit").value = "Update";
     var infothttp = new XMLHttpRequest();
     infothttp.open("GET","getphotoinfo.php?id="+getQueryString('id'),false);
     infothttp.send();

@@ -39,25 +39,25 @@
 			</li>
 			<li>
 				<form action="upload_file.php" method="post" enctype="multipart/form-data">
-					<input type="file" name="upload-file" id="upload-file" accept=".png, .jpg, .jpeg">
+					<input type="file" name="upload-file" id="upload-file" accept=".png, .jpg, .jpeg" required>
 					<img src="" id="img0">
 					<label>Title:</label>
 					<input type="text" name="img-title" id="title">
 					<label>Description:</label>
-					<textarea class="img-description" name="img-description" rows="10" id="description"></textarea>
+					<textarea class="img-description" name="img-description" rows="10" id="description" required></textarea>
 					<label>Content:</label>
-					<select name="content" id="selectcontent">
+					<select name="content" id="selectcontent" required>
 
 					</select>
 					<label>Country:</label>
-					<select name="country" id="selectcountry">
+					<select name="country" id="selectcountry" required>
 					</select>
 					<label>City:</label>
-					<select name="city" id="selectcity">
+					<select name="city" id="selectcity" required>
 						<option value="">Select a city</option>
 					</select>
 					<!--					<a href="my-photo.html">-->
-					<input type="submit" name="submit" value="Submit" class="submit-btn">
+					<input type="submit" name="submit" value="Submit" class="submit-btn" id="submit">
 					<!--					</a>-->
 				</form>
 

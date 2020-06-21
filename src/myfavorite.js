@@ -81,6 +81,9 @@ function display() {
         }
     }
     divide();
+    if(btns.length == 0){
+        document.getElementById("displayfavor").innerHTML = "<p>You have no favorite photos yet.</p>";
+    }
 }
 display();
 function deletephoto(id) {
